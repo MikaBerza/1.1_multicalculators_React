@@ -1,0 +1,55 @@
+/*-----header---------------------------------------------------------------------------*/
+header {
+  /* Элемент с position: sticky; фиксируется в рамках ближайшего родителя, когда расстояние 
+  до границы ближайшего прокручиваемого родителя достигает указанного 
+  в свойствах top, right, bottom, left значения. */
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+:root {
+  --bs-border-color-translucent: #0088cc;
+}
+
+
+.navbarCustom {
+  --bs-navbar-toggler-icon-bg: url('../header/imgHeader/icons-burger-menu-30.png');
+  --bs-navbar-toggler-border-color: #0088cc;
+  --bs-navbar-color: #0088cc;
+}
+
+
+.bgLightCustom {
+  background-color: white !important;
+}
+
+/* было так сначало!!! */
+/* .navLinkCustom,
+.active {
+  color: #0088cc !important;
+  font-weight: 600;
+  font-size: 20px;
+} */
+
+.navLinkCustom {
+  color: #0088cc !important;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.dropdownItemCustom {
+  color: #0088cc;
+  font-size: 18px;
+}
+
+@media (max-width: 400px) {
+
+  .dropdown-item,
+  .dropdownItemCustom {
+    color: #0088cc;
+    font-size: 12px;
+  }
+}

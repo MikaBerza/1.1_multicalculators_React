@@ -1,7 +1,14 @@
 import "./App.css";
+import Main from "./components/6.0_main/Main";
 
 function App() {
-  return <div>first commit</div>;
+  return (
+    <>
+      <hr />
+      <Main />
+      <hr />
+    </>
+  );
 }
 
 export default App;

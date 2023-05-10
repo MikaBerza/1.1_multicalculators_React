@@ -1,0 +1,13 @@
+/*-----Footer---------------------------------------------------------------------------*/
+.footerCustom {
+  background-color: #F8F8F8 !important;
+}
+
+.footerIcon {
+  width: 30px;
+}
+
+/* умень iconsGithub до 48px в фотошопе и убрать этот стиль!!! */
+/* .footerIconGit {
+  width: 25px;
+} */
