@@ -1,3 +1,5 @@
+// 
+// 
 import custom  from '../PasswordGenerator.module.css';
 
 function EnteringARange({ password, generatePassword, btnName }) {

@@ -1,14 +1,12 @@
-// import uuid from 'react-uuid'
+//
+//
+import React from "react";
+import { HeaderContext } from "./HeaderContext";
+
 import { v4 } from "uuid";
 
 import logoCalculator from "./imgHeader/logo-calculator.png";
 import Navbar from "./localComponents/Navbar";
-
-// элементы навигационной панели
-const navbarItems = [
-  { id: v4(), name: "Викинг и лягушка", link: "#animation" },
-  { id: v4(), name: "Быстрый щелчок", link: "#high-speed-click" },
-];
 
 // элементы выпадающего списка
 const dropdownListItems = [
@@ -40,13 +38,12 @@ const dropdownListItems = [
 
 function Header() {
   return (
-    <header>
-      <Navbar
-        logo={logoCalculator}
-        navbarItems={navbarItems}
-        dropdownListItems={dropdownListItems}
-      />
-    </header>
+    // подключаем провайдер и передаем данные в контекст
+    <HeaderContext.Provider value={{ dropdownListItems, logoCalculator }}>
+      <header>
+        <Navbar />
+      </header>
+    </HeaderContext.Provider>
   );
 }
 

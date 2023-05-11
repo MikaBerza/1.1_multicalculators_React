@@ -6,7 +6,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 5;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   width: 100%;
 }
 

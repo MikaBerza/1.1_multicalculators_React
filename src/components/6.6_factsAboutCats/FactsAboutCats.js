@@ -1,3 +1,5 @@
+//
+// 
 import React, { useEffect, useState } from "react";
 import custom from "./FactsAboutCats.module.css";
 import imgCats from "./imgFactsAboutCats/1.41defaultCat.jpg";

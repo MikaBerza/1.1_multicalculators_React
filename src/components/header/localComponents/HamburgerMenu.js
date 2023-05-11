@@ -1,5 +1,6 @@
-// 
-// 
+//
+//
+
 function HamburgerMenu() {
   return (
     <button

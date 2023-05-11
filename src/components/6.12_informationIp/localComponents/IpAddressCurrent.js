@@ -1,5 +1,6 @@
+// 
+// 
 import custom from "../InformationIp.module.css";
-//
 
 function IpAddressCurrent({ heading, clickHandlerCurrent, currentValue }) {
   return (

@@ -1,5 +1,7 @@
+// 
+// 
 import custom from "../InformationIp.module.css";
-//
+
 function IpAddressData({
   heading,
   clickHandlerShowIpData,
