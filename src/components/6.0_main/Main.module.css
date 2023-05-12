@@ -24,66 +24,30 @@ a {
 }
 
 /*-----SectionOne---------------------------------------------------------------------------*/
-
 .section-one {
   margin-bottom: 30px;
 }
 
 /* ------Swiper-Контейнер слайдера------- */
-/* .swiper {
-  height: 800px;
-} */
+
+.swiperButtonPrev {
+  --swiper-navigation-size: 30px;
+  --swiper-theme-color: #0088cc;
+}
+
 .swiperCustom {
   height: 800px;
-}
-
-/* .swiper-slide {
   background-size: cover;
   background-position: center center;
-} */
-.swiperSlide {
-  background-size: cover;
-  background-position: center center;
+  margin: 0;
+  color: #627e21;
 }
 
-/* .swiper-button-next {
-  --swiper-theme-color: #0088cc !important;
-} */
-.swiperButtonNext {
-  --swiper-theme-color: #0088cc !important;
-}
-
-/* ------Swiper-Контейнер слайдера------- */
-/* .card {
-  border: transparent;
-  padding: 0;
-} */
 .cardCustom {
   border: transparent;
   padding: 0;
 }
 
-.bg-dark {
-  background-color: transparent !important;
-}
-
-.card-img {
-  max-height: 1000px;
-  border-radius: 0;
-}
-
-/* при ширине экрана меньше 625px делаем высоту экрана 400px */
-@media (max-width: 625px) {
-  .card-img {
-    height: 730px;
-  }
-}
-
-@media (max-width: 500px) {
-  .card-img-overlay {
-    padding-top: 0;
-  }
-}
 
 /* задаём глобальные переменные для цветов, в которые будем окрашивать текст */
 :root {
@@ -119,8 +83,8 @@ a {
 }
 
 .card-text-sectionOne {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 25px;
   font-size: 1.4em;
   font-weight: 700;
   /* color: #f1b211 !important; */
@@ -135,7 +99,6 @@ a {
   /* обрезаем фон по контуру букв */
   background-clip: text;
   -webkit-background-clip: text;
-
   /* делаем заголовок прозрачным, чтобы был виден цветной фон */
   color: transparent;
 }
@@ -152,16 +115,6 @@ a {
   margin-bottom: 20px;
 }
 
-/*позиционирование внутри блока с равными долями по вертикали*/
-/* .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
-/* .h-100 {
-  align-items: center;
-} */
 .h100 {
   align-items: center;
 }
@@ -170,30 +123,11 @@ a {
   width: 50%;
 }
 
-
-/* .btn {
-  transition: non;
-  margin-bottom: 20px;
-} */
 .btnCustom {
   transition: none;
   margin-bottom: 20px;
 }
 
-/*при наведении на текст он меняется с черного на белый*/
-/* .link-buttonBorsch {
-  color: black;
-} */
-/* .link-buttonBorsch:hover {
-  color: #fff;
-} */
-
-/*при наведении на текст он меняется с черного на белый*/
-/* .btn-outline-primary {
-  --bs-btn-border-color: black;
-  --bs-btn-color: black;
-  --bs-btn-hover-bg: #0088cc;
-} */
 .btnPrimary {
   border-color: black;
   color: black;
@@ -205,8 +139,6 @@ a {
   background-color: #0088cc;
   color: #fff;
 }
-
-
 
 /*-----SectionThree---------------------------------------------------------------------------*/
 .section-free-heading {

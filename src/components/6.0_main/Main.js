@@ -1,6 +1,9 @@
 //
 //
-import "../../globalFiles/swiperScript";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, EffectCube } from "swiper";
+import "../../globalFiles/swiperStyle.css";
+
 import custom from "./Main.module.css";
 
 import Header from "../header/Header";
@@ -13,6 +16,8 @@ import PageCard from "./localComponents/PageCard";
 // ___импортируем изображения (1_section)
 import fon101 from "./imgMain/1_section/1.01fon.jpg";
 import fon102 from "./imgMain/1_section/1.02fon.jpg";
+import fon103 from "./imgMain/1_section/1.03fon.jpg";
+import fon104 from "./imgMain/1_section/1.04fon.jpg";
 
 // ___импортируем изображения (2_section)
 import borsch from "./imgMain/2_section/1.05borsch.png";
@@ -35,96 +40,76 @@ function Main() {
       <main>
         {/* <!-----SectionOne---------------------------------------------------------------------------> */}
         <section className={custom["section-one"]}>
-          {/* <!-- Контейнер слайдера --> */}
-          <div className={`swiper ${custom["swiperCustom"]} container-xxl`}>
-            {/* <!-- Дополнительная оболочка --> */}
-            <div className="swiper-wrapper">
-              {/* <!-- Slides --> */}
-              <SwiperSlideCard img={fon101} />
-              <SwiperSlideCard img={fon102} />
-              {/* <div
-                className="swiper-slide"
-                style={{
-                  backgroundImage: `url(${fon101})`,
-                }}
-              >
-                <h1 className="card-title card-title-sectionOne ">
-                  История создания калькулятора
-                </h1>
-                <p className="card-text card-text-sectionOne">
-                  Историю вычислительных машин и калькуляторов, традиционно
-                  начинают с суммирующей машины Паскаля, созданной в 1643 году
-                  Блезом Паскалем, и арифмометра Лейбница, изобретённого в 1673
-                  году немецким математиком Готфридом Вильгельмом Лейбницем. В
-                  1876 году русский математик П. Л. Чебышёв создал суммирующий
-                  аппарат с непрерывной передачей десятков.
-                </p>
-              </div>
-              <div
-                className="swiper-slide"
-                style={{
-                  backgroundImage: `url(${fon101})`,
-                }}
-              >
-                <h1 className="card-title card-title-sectionOne ">
-                  История создания калькулятора
-                </h1>
-                <p className="card-text card-text-sectionOne">
-                  В 1881 году он же сконструировал к нему приставку для
-                  умножения и деления (арифмометр Чебышёва). Массовый выпуск
-                  механических устройств автоматизации счёта начался в конце XIX
-                  века: суммирующие машины, табуляторы и арифмометры стали
-                  реальным подспорьем в бухгалтерии, статистике и инженерных
-                  расчётах. Электронные клавишные вычислительные устройства были
-                  созданы в 1950-х годах с использованием сначала реле, а затем
-                  полупроводниковых компонентов.
-                </p>
-              </div>
-              <div
-                className="swiper-slide"
-                style={{
-                  backgroundImage: `url(${fon101})`,
-                }}
-              >
-                <h1 className="card-title card-title-sectionOne ">
-                  История создания калькулятора
-                </h1>
-                <p className="card-text card-text-sectionOne">
-                  Первые такие приборы были размером с мебельную тумбу и весили
+          <div className="container-xxl">
+            {/* <!-- Slides --> */}
+            <Swiper
+              effect={"cube"}
+              grabCursor={true}
+              pagination={true}
+              navigation={true}
+              loop={true}
+              modules={[Navigation, EffectCube, Pagination]}
+              cubeEffect={{
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 0,
+                shadowScale: 0,
+              }}
+              className={`${custom["swiperButtonPrev"]}`}
+            >
+              <SwiperSlide>
+                <SwiperSlideCard
+                  image={fon101}
+                  cardTitle={"История создания калькулятора"}
+                  cardText={`Историю вычислительных машин и калькуляторов, традиционно начинают с
+                суммирующей машины Паскаля, созданной в 1643 году Блезом Паскалем, и
+                арифмометра Лейбница, изобретённого в 1673 году немецким математиком
+                Готфридом Вильгельмом Лейбницем. В 1876 году русский математик П. Л.
+                Чебышёв создал суммирующий аппарат с непрерывной передачей десятков.`}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SwiperSlideCard
+                  image={fon102}
+                  cardTitle={"История создания калькулятора"}
+                  cardText={`В 1881 году он же сконструировал к нему приставку для
+                умножения и деления (арифмометр Чебышёва). Массовый выпуск
+                механических устройств автоматизации счёта начался в конце XIX
+                века: суммирующие машины, табуляторы и арифмометры стали
+                реальным подспорьем в бухгалтерии, статистике и инженерных
+                расчётах. Электронные клавишные вычислительные устройства были
+                созданы в 1950-х годах с использованием сначала реле, а затем
+                полупроводниковых компонентов.`}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SwiperSlideCard
+                  image={fon103}
+                  cardTitle={"История создания калькулятора"}
+                  cardText={`Первые такие приборы были размером с мебельную тумбу и весили
                   более сотни килограммов. Так, в 1957 году компанией Casio был
                   выпущен один из первых серийных калькуляторов 14-А. Он
                   выполнял четыре действия арифметики над 14-разрядными
                   десятичными числами. Конструкция использовала реле, весила 140
                   кг и была выполнена в виде стола с тумбой-вычислительным
-                  блоком, клавиатурой и дисплеем, при работе потребляла 300 Вт.
-                </p>
-              </div>
-              <div
-                className="swiper-slide"
-                style={{
-                  backgroundImage: `url(${fon101})`,
-                }}
-              >
-                <h1 className="card-title card-title-sectionOne ">
-                  История создания калькулятора
-                </h1>
-                <p className="card-text card-text-sectionOne">
-                  В 1961 году в Великобритании начат выпуск первого массового
+                  блоком, клавиатурой и дисплеем, при работе потребляла 300 Вт.`}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SwiperSlideCard
+                  image={fon104}
+                  cardTitle={"История создания калькулятора"}
+                  cardText={`В 1961 году в Великобритании начат выпуск первого массового
                   полностью электронного калькулятора ANITA MK VIII с
                   11-разрядным индикатором на газоразрядных лампах, полной
                   клавиатурой для ввода числа + десять клавиш для ввода
                   множителя. В СССР в 1964 году выпущен первый отечественный
                   серийный электронный калькулятор «Вега», в США в том же году
                   появился массовый полностью транзисторный калькулятор FRIDEN
-                  130 (4 регистра, обратная польская нотация).
-                </p>
-              </div> */}
-            </div>
-            {/* <!-- Разбивка на страницы --> */}
-            <div className="swiper-pagination"></div>
-            {/* <!-- Навигационные кнопки --> */}
-            <div className="swiper-button-prev"></div>
-            <div className={`swiper-button-next ${["swiperButtonNext"]}`}></div>
+                  130 (4 регистра, обратная польская нотация).`}
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
 
