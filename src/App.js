@@ -1,12 +1,36 @@
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import Main from "./components/6.0_main/Main";
+import FactsAboutCats from "./components/6.6_factsAboutCats/FactsAboutCats";
+import PasswordGenerator from "./components/6.10_passwordGenerator/PasswordGenerator";
+import InformationIp from "./components/6.12_informationIp/InformationIp";
+
+import "./App.css";
+// import Main from "./components/6.0_main/Main";
 
 function App() {
   return (
     <>
-      <hr />
-      <Main />
-      <hr />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Main" element={<Main />} />
+          <Route
+            path="/6.6_factsAboutCats/FactsAboutCats"
+            element={<FactsAboutCats />}
+          />
+          <Route
+            path="/6.10_passwordGenerator/PasswordGenerator"
+            element={<PasswordGenerator />}
+          />
+          <Route
+            path="/6.12_informationIp/InformationIp"
+            element={<InformationIp />}
+          />
+          {/* <Route path="/Pancakes" element={<Pancakes />} />
+          <Route path="/Pilaf" element={<Pilaf />} /> */}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

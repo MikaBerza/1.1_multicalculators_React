@@ -1,8 +1,11 @@
 //
-// 
+//
 import React, { useEffect, useState } from "react";
 import custom from "./FactsAboutCats.module.css";
 import imgCats from "./imgFactsAboutCats/1.41defaultCat.jpg";
+
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 function FactsAboutCats() {
   const [textCat, setTextCat] = useState("");
@@ -28,20 +31,24 @@ function FactsAboutCats() {
   }
 
   return (
-    <main>
-      <div className={custom["container"]}>
-        <div className={custom["card"]}>
-          <h3 className={custom["card__header"]}>Facts about cats</h3>
-          <p className={custom["card__fact"]}>{textCat}</p>
-          <img
-            onClick={handleClickImage}
-            className={custom["card__img"]}
-            src={imgCats}
-            alt="Cat"
-          />
+    <>
+      <Header />
+      <main className={custom["wrapper"]}>
+        <div className={custom["container"]}>
+          <div className={custom["card"]}>
+            <h3 className={custom["card__header"]}>Facts about cats</h3>
+            <p className={custom["card__fact"]}>{textCat}</p>
+            <img
+              onClick={handleClickImage}
+              className={custom["card__img"]}
+              src={imgCats}
+              alt="Cat"
+            />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
 

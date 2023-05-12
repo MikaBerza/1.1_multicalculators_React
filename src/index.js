@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-
 import "normalize.css";
-import "./components/globalFiles/bootstrapScript";
-// import "swiper";
+import "./globalFiles/bootstrapScript";
+
+// import "./globalFiles/swiperScript";
+// import "./globalFiles/initializeSwiper";
+
 import "./index.css";
-
-
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

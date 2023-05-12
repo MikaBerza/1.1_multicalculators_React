@@ -1,9 +1,12 @@
-// 
-// 
+//
+//
 import React, { useEffect, useState } from "react";
 
 import { v4 } from "uuid";
 import custom from "./InformationIp.module.css";
+
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 //
 import IpAddressCurrent from "./localComponents/IpAddressCurrent.js";
 import IpAddressData from "./localComponents/IpAddressData.js";
@@ -109,22 +112,26 @@ function InformationIp() {
   }
 
   return (
-    <main>
-      <section className={custom["section-one"]}>
-        <IpAddressCurrent
-          heading={"Получение текущего IP-адреса"}
-          clickHandlerCurrent={clickHandlerCurrent}
-          currentValue={currentValue}
-        />
-        <IpAddressData
-          heading={"Получение данных об IP-адресе"}
-          clickHandlerShowIpData={clickHandlerShowIpData}
-          currentDataIpValue={currentDataIpValue}
-          handleChange={handleChange}
-          ipData={ipData}
-        />
-      </section>
-    </main>
+    <>
+      <Header />
+      <main>
+        <section className={custom["section-one"]}>
+          <IpAddressCurrent
+            heading={"Получение текущего IP-адреса"}
+            clickHandlerCurrent={clickHandlerCurrent}
+            currentValue={currentValue}
+          />
+          <IpAddressData
+            heading={"Получение данных об IP-адресе"}
+            clickHandlerShowIpData={clickHandlerShowIpData}
+            currentDataIpValue={currentDataIpValue}
+            handleChange={handleChange}
+            ipData={ipData}
+          />
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 
