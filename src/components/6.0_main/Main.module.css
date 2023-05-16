@@ -23,7 +23,7 @@ a {
   }
 }
 
-/*-----SectionOne---------------------------------------------------------------------------*/
+/*-----1_section_calculatorHistory-------------------------------------------------------------------*/
 .section-one {
   margin-bottom: 30px;
 }
@@ -109,7 +109,7 @@ a {
   }
 }
 
-/*-----SectionTwo---------------------------------------------------------------------------*/
+/*-----2_section_multicalculatorCards----------------------------------------------------------------*/
 .heading {
   text-align: center;
   margin-bottom: 20px;
@@ -140,7 +140,7 @@ a {
   color: #fff;
 }
 
-/*-----SectionThree---------------------------------------------------------------------------*/
+/*-----3_section_vikingAndFrog-----------------------------------------------------------------------*/
 .section-free-heading {
   text-align: center;
 }
@@ -149,15 +149,10 @@ a {
   width: 20px;
 }
 
+/* btn-sectionThre-play section-free-block imgSectionThree*/
 .section-free-block {
   text-align: right;
   margin-bottom: 20px;
-}
-
-#btnSectionThreeStart,
-#btnSectionThreeStop {
-  border-width: 2px;
-  margin-right: 20px;
 }
 
 .btn-sectionThre-play {
@@ -195,11 +190,18 @@ a {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #ffc107;
   --bs-gradient: none;
-  /*убераем бордер который аоявляется при нажатии на кнопку*/
+  /*уберем бордер который появляется при нажатии на кнопку*/
   /* box-shadow: #d2ab34 !important; */
 }
 
-/*-----SectionFour---------------------------------------------------------------------------*/
+.btn-sectionThre-play,
+.btn-sectionThre-pause {
+  border-width: 2px;
+  margin-right: 20px;
+}
+
+/*-----4_section_quickClick---------------------------------------------------------------------------*/
+/* btn__click */
 .section-four {
   height: 600px;
   /* центрируем кнопку*/
@@ -208,12 +210,12 @@ a {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-image: url('./imgMain/4_section/1.29fonSectionFour.jpg');
+  background-image: url('./4_section_quickClick/imgQuickClick/1.29fonSectionFour.jpg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.h4__item {
+.h4Item {
   font-weight: 400;
   /* Жирность шрифта */
 }
@@ -239,15 +241,12 @@ td {
   /* Жирность шрифта */
 }
 
-.btn__click,
-.btn__reboot {
+.btnSuccess {
   width: 146px;
   height: 62px;
   margin-right: 20px;
   font-size: 22px;
-}
 
-.btn-success {
   --bs-btn-color: black;
   --bs-btn-bg: non;
   --bs-btn-border-color: black;
@@ -265,7 +264,7 @@ td {
   --bs-btn-disabled-border-color: black;
 }
 
-.img-section-four {
+.iconBtnSuccess {
   width: 38px;
 }
 

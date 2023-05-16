@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import custom from "../Main.module.css";
+import custom from "../../Main.module.css";
 
 function PageCard({ image, cardTitle, cardText, path, buttonName }) {
   return (

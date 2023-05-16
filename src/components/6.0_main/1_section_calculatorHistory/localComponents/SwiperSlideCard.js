@@ -1,8 +1,6 @@
 //
 //
-// import "../../../globalFiles/swiperScript";
-
-import custom from "../Main.module.css";
+import custom from "../../Main.module.css";
 
 function SwiperSlideCard({ image, cardTitle, cardText }) {
   return (
