@@ -6,10 +6,21 @@ import custom from "../Main.module.css";
 import SectionName from "../reusableComponents/SectionName";
 import PageCard from "./localComponents/PageCard";
 
-// ___импортируем массив ссылок на изображения для (2_section_multicalculatorCards)
-import linksToTheCardImage from "./imgMulticalculatorCards/linksToImagesForCard";
+// ___получим массив ссылок на изображения для (2_section_multicalculatorCards)
+// импортируем функцию, которая вернет массив ссылок на изображения из указанной папки
+import getLinksToImages from "../../../globalFiles/getLinksToImages";
 
 function MulticalculatorCards() {
+  // записываем массив ссылок на изображения из указанной папки
+  // в константу linksToTheCardImage
+  const linksToTheCardImage = getLinksToImages(
+    require.context(
+      "./imgMulticalculatorCards",
+      true,
+      /\.(png|svg|jpg|jpeg|gif)$/i
+    )
+  );
+
   return (
     <section className="section-two container-xxl">
       <div className={custom["heading"]}>

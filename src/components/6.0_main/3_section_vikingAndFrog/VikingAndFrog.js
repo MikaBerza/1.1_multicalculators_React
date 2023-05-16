@@ -14,10 +14,21 @@ import Button from "../reusableComponents/Button";
 import iconsStart127 from "./imgVikingAndFrog/button_animation/1.27iconsStart.png";
 import iconsStop128 from "./imgVikingAndFrog/button_animation/1.28iconsStop.png";
 
-// ___импортируем массив ссылок на изображения для (3_section_vikingAndFrog)
-import linksToTheVikingImage from "./imgVikingAndFrog/viking_animation/linksToImagesForAnimation";
+// ___получим массив ссылок на изображения для (3_section_vikingAndFrog)
+// импортируем функцию, которая вернет массив ссылок на изображения из указанной папки
+import getLinksToImages from "../../../globalFiles/getLinksToImages";
 
 function VikingAndFrog() {
+  // записываем массив ссылок на изображения из указанной папки
+  // в константу linksToTheCardImage
+  const linksToTheVikingImage = getLinksToImages(
+    require.context(
+      "./imgVikingAndFrog/viking_animation",
+      true,
+      /\.(png|svg|jpg|jpeg|gif)$/i
+    )
+  );
+
   const [count, setCount] = useState(0);
   /* Возвращаемое intervalID числовое ненулевое значение, которое идентифицирует таймер, 
   созданный вызовом setInterval(); 
