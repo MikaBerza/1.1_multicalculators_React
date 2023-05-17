@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import custom from "../Main.module.css";
 
 // ___локальные компонент
-import SectionName from "../reusableComponents/SectionName";
+import SectionName from "../../reusableComponents/6.0/SectionName";
 import Instruction from "./localComponents/Instruction";
 import Table from "./localComponents/Table";
-import Button from "../reusableComponents/Button";
+import Button from "../../reusableComponents/6.0/Button";
 
 // ___импортируем изображения (4_section_quickClick)
 import iconClick130 from "./imgQuickClick/1.30iconClick.png";

@@ -3,7 +3,7 @@
 import custom from "../Main.module.css";
 
 // ___локальные компоненты
-import SectionName from "../reusableComponents/SectionName";
+import SectionName from "../../reusableComponents/6.0/SectionName";
 import PageCard from "./localComponents/PageCard";
 
 // ___получим массив ссылок на изображения для (2_section_multicalculatorCards)
@@ -33,7 +33,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет требуемое количество продуктов для приготовления указанного числа порций."
           }
-          path={""}
+          path={"/6.1_borsch/Borsch"}
           buttonName={"Перейти"}
         />
 
@@ -43,7 +43,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет требуемое количество продуктов для приготовления указанного числа порций."
           }
-          path={"./borsch.html"}
+          path={"/6.2_pancakes/Pancakes"}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -52,7 +52,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет требуемое количество продуктов для приготовления указанного числа порций."
           }
-          path={"./borsch.html"}
+          path={"/6.3_pilaf/Pilaf"}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -61,7 +61,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет аннуитетный и дифференцированный платеж при погашении займа."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -70,7 +70,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет количество дней недели между датами, позволяя спланировать свои задачи."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -88,7 +88,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет расход и стоимость электроэнергии, потребляемой пользователем с учетом времени работы прибора."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -97,7 +97,7 @@ function MulticalculatorCards() {
           cardText={
             "Вычисляет расход и стоимость холодного водоснабжения, с учетом времени работы прибора."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -106,7 +106,7 @@ function MulticalculatorCards() {
           cardText={
             "Позволяет записывать список запланированных дневных дел, редактировать, помечать дела сделанными и удалять их."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard
@@ -124,7 +124,7 @@ function MulticalculatorCards() {
           cardText={
             "Блокнот позволяет держать все записи в одном месте и возвращаться к ним спустя время."
           }
-          path={"./borsch.html"}
+          path={""}
           buttonName={"Перейти"}
         />
         <PageCard

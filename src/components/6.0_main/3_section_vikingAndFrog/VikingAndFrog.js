@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import custom from "../Main.module.css";
 
 // ___локальные компонент
-import SectionName from "../reusableComponents/SectionName";
+import SectionName from "../../reusableComponents/6.0/SectionName";
 import Instruction from "./localComponents/Instruction";
 import ShowAnimation from "./localComponents/ShowAnimation";
-import Button from "../reusableComponents/Button";
+import Button from "../../reusableComponents/6.0/Button";
 
 // ___импортируем изображения для (3_section_button_animation)
 import iconsStart127 from "./imgVikingAndFrog/button_animation/1.27iconsStart.png";

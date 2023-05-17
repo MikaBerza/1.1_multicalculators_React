@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 //
 //
 import React, { useContext } from "react";
@@ -12,12 +13,12 @@ function DropdownListItems() {
   const listItem = dropdownListItems.map((item) => {
     return (
       <li key={item.id}>
-        <a
+        <Link
           className={`dropdown-item ${custom["dropdownItemCustom"]}`}
-          href={item.link}
+          to={item.link}
         >
           {item.name}
-        </a>
+        </Link>
       </li>
     );
   });

@@ -1,7 +1,7 @@
 //
 //
 
-import custom from "../Main.module.css";
+import custom from "../../6.0_main/Main.module.css";
 
 function Button({
   buttonStyle,

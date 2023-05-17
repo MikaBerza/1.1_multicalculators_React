@@ -10,16 +10,24 @@ import Navbar from "./localComponents/Navbar";
 
 // элементы выпадающего списка
 const dropdownListItems = [
-  { id: v4(), name: "Борщ - расчет ингредиентов", link: "./borsch.html" },
-  { id: v4(), name: "Блины - расчет ингредиентов", link: "./pancakes.html" },
-  { id: v4(), name: "Плов - расчет ингредиентов", link: "./pilaf.html" },
+  { id: v4(), name: "Борщ - расчет ингредиентов", link: "/6.1_borsch/Borsch" },
+  {
+    id: v4(),
+    name: "Блины - расчет ингредиентов",
+    link: "/6.2_pancakes/Pancakes",
+  },
+  { id: v4(), name: "Плов - расчет ингредиентов", link: "/6.3_pilaf/Pilaf" },
   {
     id: v4(),
     name: "Ипотечный - калькулятор",
     link: "./mortgageCalculator.html",
   },
   { id: v4(), name: "Дневной - калькулятор", link: "./dailyCalculator.html" },
-  { id: v4(), name: "Факты о котах", link: "./factsAboutCats.html" },
+  {
+    id: v4(),
+    name: "Факты о котах",
+    link: "/6.6_factsAboutCats/FactsAboutCats",
+  },
   {
     id: v4(),
     name: "Калькулятор стоимости электроэнергии",
@@ -31,9 +39,17 @@ const dropdownListItems = [
     link: "./waterCalculator.html",
   },
   { id: v4(), name: "Ежедневный список дел", link: "./dailyTodoList.html" },
-  { id: v4(), name: "Генератор паролей", link: "./passwordGenerator" },
+  {
+    id: v4(),
+    name: "Генератор паролей",
+    link: "/6.10_passwordGenerator/PasswordGenerator",
+  },
   { id: v4(), name: "Блокнот", link: "./notepad" },
-  { id: v4(), name: "Информация об IP", link: "./informationIp.html" },
+  {
+    id: v4(),
+    name: "Информация об IP",
+    link: "/6.12_informationIp/InformationIp",
+  },
 ];
 
 function Header() {
