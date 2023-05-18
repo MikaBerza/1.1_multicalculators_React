@@ -38,7 +38,11 @@ const dropdownListItems = [
     name: "Калькулятор стоимости холодной воды",
     link: "./waterCalculator.html",
   },
-  { id: v4(), name: "Ежедневный список дел", link: "./dailyTodoList.html" },
+  {
+    id: v4(),
+    name: "Ежедневный список дел",
+    link: "/6.9_dailyTodoList/DailyTodoList",
+  },
   {
     id: v4(),
     name: "Генератор паролей",

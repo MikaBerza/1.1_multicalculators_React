@@ -8,6 +8,7 @@ import InformationIp from "./components/6.12_informationIp/InformationIp";
 import Borsch from "./components/6.1_borsch/Borsch";
 import Pancakes from "./components/6.2_pancakes/Pancakes";
 import Pilaf from "./components/6.3_pilaf/Pilaf";
+import DailyTodoList from "./components/6.9_dailyTodoList/DailyTodoList";
 
 import "./App.css";
 // import Main from "./components/6.0_main/Main";
@@ -33,8 +34,10 @@ function App() {
           <Route path="/6.1_borsch/Borsch" element={<Borsch />} />
           <Route path="/6.2_pancakes/Pancakes" element={<Pancakes />} />
           <Route path="/6.3_pilaf/Pilaf" element={<Pilaf />} />
-          {/* <Route path="/Pancakes" element={<Pancakes />} />
-          <Route path="/Pilaf" element={<Pilaf />} /> */}
+          <Route
+            path="/6.9_dailyTodoList/DailyTodoList"
+            element={<DailyTodoList />}
+          />
         </Routes>
       </BrowserRouter>
     </>

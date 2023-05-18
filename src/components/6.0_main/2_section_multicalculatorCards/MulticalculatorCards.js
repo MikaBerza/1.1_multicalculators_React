@@ -106,7 +106,7 @@ function MulticalculatorCards() {
           cardText={
             "Позволяет записывать список запланированных дневных дел, редактировать, помечать дела сделанными и удалять их."
           }
-          path={""}
+          path={"/6.9_dailyTodoList/DailyTodoList"}
           buttonName={"Перейти"}
         />
         <PageCard
