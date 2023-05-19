@@ -9,6 +9,7 @@ import Borsch from "./components/6.1_borsch/Borsch";
 import Pancakes from "./components/6.2_pancakes/Pancakes";
 import Pilaf from "./components/6.3_pilaf/Pilaf";
 import DailyTodoList from "./components/6.9_dailyTodoList/DailyTodoList";
+import Notepad from "./components/6.11_notepad/Notepad";
 
 import "./App.css";
 // import Main from "./components/6.0_main/Main";
@@ -38,6 +39,7 @@ function App() {
             path="/6.9_dailyTodoList/DailyTodoList"
             element={<DailyTodoList />}
           />
+          <Route path="/6.11_notepad/Notepad" element={<Notepad />} />
         </Routes>
       </BrowserRouter>
     </>

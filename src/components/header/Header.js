@@ -48,7 +48,7 @@ const dropdownListItems = [
     name: "Генератор паролей",
     link: "/6.10_passwordGenerator/PasswordGenerator",
   },
-  { id: v4(), name: "Блокнот", link: "./notepad" },
+  { id: v4(), name: "Блокнот", link: "/6.11_notepad/Notepad" },
   {
     id: v4(),
     name: "Информация об IP",

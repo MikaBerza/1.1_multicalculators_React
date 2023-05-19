@@ -124,7 +124,7 @@ function MulticalculatorCards() {
           cardText={
             "Блокнот позволяет держать все записи в одном месте и возвращаться к ним спустя время."
           }
-          path={""}
+          path={"/6.11_notepad/Notepad"}
           buttonName={"Перейти"}
         />
         <PageCard
