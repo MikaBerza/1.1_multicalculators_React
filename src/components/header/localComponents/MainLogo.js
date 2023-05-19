@@ -1,6 +1,8 @@
 //
 //
+
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { HeaderContext } from "../HeaderContext";
 
 function MainLogo({ link }) {
@@ -8,9 +10,9 @@ function MainLogo({ link }) {
   const { logoCalculator } = useContext(HeaderContext);
 
   return (
-    <a className="navbar-brand " href={link}>
+    <Link className="navbar-brand " to={link}>
       <img src={logoCalculator} height="60" alt="logo" />
-    </a>
+    </Link>
   );
 }
 

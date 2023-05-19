@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { v4 } from "uuid";
 import "./Notepad.css";
 //
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+//
 import Heading from "./localComponents/Heading";
 import Search from "./localComponents/Search";
 import Filter from "./localComponents/Filter";
@@ -202,52 +205,56 @@ function Notepad() {
   });
 
   return (
-    <main className="notepad__flex-container">
-      {/*_______________Heading____________*/}
-      <Heading title={"Блокнот"} />
-      {/*_______________notepad__centre-block____________*/}
-      <div className="notepad__centre-block">
-        <section className="notepad__section-one">
-          {/*_______________Search____________*/}
-          <Search value={value} onChange={handleChangeInput} />
-          {/*_______________Filtering-and-counter____________*/}
-          <div className="notepad__filtering-and-counter">
-            <Counter counter={counter} totalEntries={notes.length} />
-            <Filter
-              title={"фильтрация"}
-              selectValue={select}
-              handleChangeSelect={handleChangeSelect}
+    <>
+      <Header />
+      <main className="notepad__flex-container">
+        {/*_______________Heading____________*/}
+        <Heading title={"Блокнот"} />
+        {/*_______________notepad__centre-block____________*/}
+        <div className="notepad__centre-block">
+          <section className="notepad__section-one">
+            {/*_______________Search____________*/}
+            <Search value={value} onChange={handleChangeInput} />
+            {/*_______________Filtering-and-counter____________*/}
+            <div className="notepad__filtering-and-counter">
+              <Counter counter={counter} totalEntries={notes.length} />
+              <Filter
+                title={"фильтрация"}
+                selectValue={select}
+                handleChangeSelect={handleChangeSelect}
+              />
+            </div>
+            {/*_______________Output-group____________*/}
+            <ul className="notepad__numbered-list">
+              {searchAndFilter.map((note, index) => {
+                return (
+                  <OutputGroup
+                    key={note.id}
+                    note={note}
+                    index={index}
+                    onNoteTitleDoubleClick={editNote}
+                    onClickCheckbox={handleChangeCheckbox}
+                    getNumberActiveCheckboxes={getNumberActiveCheckboxes}
+                    deleteNoteElement={deleteNoteElement}
+                  />
+                );
+              })}
+            </ul>
+          </section>
+          {/*_______________Input-group____________*/}
+          <section className="notepad__section-two">
+            <InputGroup
+              valTextarea={valTextarea}
+              handleChangeTextarea={handleChangeTextarea}
+              isEdit={isEdit}
+              chooseFunction={chooseFunction}
+              name={"postContent"}
             />
-          </div>
-          {/*_______________Output-group____________*/}
-          <ul className="notepad__numbered-list">
-            {searchAndFilter.map((note, index) => {
-              return (
-                <OutputGroup
-                  key={note.id}
-                  note={note}
-                  index={index}
-                  onNoteTitleDoubleClick={editNote}
-                  onClickCheckbox={handleChangeCheckbox}
-                  getNumberActiveCheckboxes={getNumberActiveCheckboxes}
-                  deleteNoteElement={deleteNoteElement}
-                />
-              );
-            })}
-          </ul>
-        </section>
-        {/*_______________Input-group____________*/}
-        <section className="notepad__section-two">
-          <InputGroup
-            valTextarea={valTextarea}
-            handleChangeTextarea={handleChangeTextarea}
-            isEdit={isEdit}
-            chooseFunction={chooseFunction}
-            name={"postContent"}
-          />
-        </section>
-      </div>
-    </main>
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
 export { twentyPercent, eightyPercent, ninetyPercent };

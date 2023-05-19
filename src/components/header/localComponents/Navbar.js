@@ -13,7 +13,7 @@ function Navbar() {
       className={`navbar navbar-expand-lg bg-light ${custom["navbarCustom"]} ${custom["bgLightCustom"]}`}
     >
       <div className="container-xxl">
-        <MainLogo link={"./main.html"} />
+        <MainLogo link={"/Main"} />
         <HamburgerMenu />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
