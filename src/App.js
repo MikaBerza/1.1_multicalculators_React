@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
+import Authentication from "./components/6.0.0_authentication/Authentication";
 import Main from "./components/6.0_main/Main";
 import FactsAboutCats from "./components/6.6_factsAboutCats/FactsAboutCats";
 import PasswordGenerator from "./components/6.10_passwordGenerator/PasswordGenerator";
@@ -12,13 +13,13 @@ import DailyTodoList from "./components/6.9_dailyTodoList/DailyTodoList";
 import Notepad from "./components/6.11_notepad/Notepad";
 
 import "./App.css";
-// import Main from "./components/6.0_main/Main";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Authentication />} />
           <Route path="/Main" element={<Main />} />
           <Route
             path="/6.6_factsAboutCats/FactsAboutCats"

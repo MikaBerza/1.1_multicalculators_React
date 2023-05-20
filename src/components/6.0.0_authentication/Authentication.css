@@ -1,0 +1,60 @@
+.authentication__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.authentication__wrapper {
+  max-width: 400px;
+  margin: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  padding: 20px;
+}
+
+.authentication__logo {
+  text-align: center;
+}
+
+.authentication__logo-heading {
+  margin-top: 14px;
+  font-weight: 400;
+}
+
+.authentication__logo-requirement {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+
+/* ------------------Изменяемый бордер элементов ввода------------------------------- */
+.authentication__style-error {
+  border: 2px solid red;
+}
+
+
+/* ------------------Изменяемый бордер элементов ввода------------------------------- */
+
+.authentication__description {
+  margin-top: 14px;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* p {
+  margin-top: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+} */
+
+
+
+.authentication__btn {
+  display: block;
+  width: 100%;
+
+  --bs-btn-bg: #0088cc;
+  --bs-btn-border-color: #0088cc;
+  --bs-btn-hover-border-color: #00416A;
+  --bs-btn-hover-bg: #00416A;
+}
