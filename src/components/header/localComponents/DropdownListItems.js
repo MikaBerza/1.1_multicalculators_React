@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import { HeaderContext } from "../HeaderContext";
 import custom from "../Header.module.css";
+import scrollToTop from "../../../globalFiles/scrollToTop";
 
 function DropdownListItems() {
   // возвращаем из контекста элементы выпадающего списка
@@ -14,8 +15,9 @@ function DropdownListItems() {
     return (
       <li key={item.id}>
         <Link
-          className={`dropdown-item ${custom["dropdownItemCustom"]}`}
           to={item.link}
+          className={`dropdown-item ${custom["dropdownItemCustom"]}`}
+          onClick={scrollToTop}
         >
           {item.name}
         </Link>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import custom from "../../Main.module.css";
+import scrollToTop from "../../../../globalFiles/scrollToTop";
 
 function PageCard({ image, cardTitle, cardText, path, buttonName }) {
   return (
@@ -13,6 +14,7 @@ function PageCard({ image, cardTitle, cardText, path, buttonName }) {
           <Link
             to={path}
             className={`btn btn-primary ${custom["btnCustom"]} ${custom["btnPrimary"]}`}
+            onClick={scrollToTop}
           >
             {buttonName}
           </Link>
