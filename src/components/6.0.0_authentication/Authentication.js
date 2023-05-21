@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 // import { useState, useEffect, useCallback } from "react";
 /*
@@ -10,6 +9,7 @@ import { useState, useEffect, useCallback } from "react";
   Чекбокас "Я не робот": true
 */
 import "./Authentication.css";
+import userData from "./userData.json";
 import logo from "../header/imgHeader/logo-calculator.png";
 
 import Heading from "./localComponents/Heading";
@@ -40,92 +40,105 @@ function Authentication() {
     setCheck(!check); // инвертируем стейт
   }
 
+  /* Хук useCallback – возвращает мемоизированную версию колбэка, 
+     который изменяется, если изменяются значения одной из зависимостей */
+
   const enterData = useCallback(() => {
-    if (
-      valueEmail === "Address@mail.ru" &&
-      valuePassword === "Adr78*#" &&
-      check === true
-    ) {
-      setStyleEmail(`form-control`);
-      setStylePassword(`form-control`);
-      setStyleCheck(`form-check-input`);
-      return true;
-    } else if (
-      valueEmail !== "Address@mail.ru" &&
-      valuePassword !== "Adr78*#" &&
-      check !== true
-    ) {
-      setStyleEmail(`form-control authentication__style-error`);
-      setStylePassword(`form-control authentication__style-error`);
-      setStyleCheck(`form-check-input authentication__style-error`);
-      return false;
-    } else if (
-      valueEmail !== "Address@mail.ru" &&
-      valuePassword !== "Adr78*#" &&
-      check === true
-    ) {
-      setStyleEmail(`form-control authentication__style-error`);
-      setStylePassword(`form-control authentication__style-error`);
-      setStyleCheck(`form-check-input`);
-      return false;
-    } else if (
-      valueEmail === "Address@mail.ru" &&
-      valuePassword === "Adr78*#" &&
-      check !== true
-    ) {
-      setStyleEmail(`form-control`);
-      setStylePassword(`form-control`);
-      setStyleCheck(`form-check-input authentication__style-error`);
-      return false;
-    } else if (
-      valueEmail === "Address@mail.ru" &&
-      valuePassword !== "Adr78*#" &&
-      check === true
-    ) {
-      setStyleEmail(`form-control`);
-      setStylePassword(`form-control authentication__style-error`);
-      setStyleCheck(`form-check-input`);
-      return false;
-    } else if (
-      valueEmail !== "Address@mail.ru" &&
-      valuePassword === "Adr78*#" &&
-      check === true
-    ) {
-      setStyleEmail(`form-control authentication__style-error`);
-      setStylePassword(`form-control`);
-      setStyleCheck(`form-check-input`);
-      return false;
-    } else if (
-      valueEmail === "Address@mail.ru" &&
-      valuePassword !== "Adr78*#" &&
-      check !== true
-    ) {
-      setStyleEmail(`form-control`);
-      setStylePassword(`form-control authentication__style-error`);
-      setStyleCheck(`form-check-input authentication__style-error`);
-      return false;
-    } else if (
-      valueEmail !== "Address@mail.ru" &&
-      valuePassword === "Adr78*#" &&
-      check !== true
-    ) {
-      setStyleEmail(`form-control authentication__style-error`);
-      setStylePassword(`form-control`);
-      setStyleCheck(`form-check-input authentication__style-error`);
-      return false;
-    }
+    let newFlag = false;
+    userData.map((note) => {
+      if (
+        valueEmail === note.email &&
+        valuePassword === note.password &&
+        check === note.check
+      ) {
+        setStyleEmail(`form-control`);
+        setStylePassword(`form-control`);
+        setStyleCheck(`form-check-input`);
+        newFlag = true;
+      } else if (
+        valueEmail !== note.email &&
+        valuePassword !== note.password &&
+        check !== note.check
+      ) {
+        setStyleEmail(`form-control authentication__style-error`);
+        setStylePassword(`form-control authentication__style-error`);
+        setStyleCheck(`form-check-input authentication__style-error`);
+        newFlag = false;
+      } else if (
+        valueEmail !== note.email &&
+        valuePassword !== note.password &&
+        check === note.check
+      ) {
+        setStyleEmail(`form-control authentication__style-error`);
+        setStylePassword(`form-control authentication__style-error`);
+        setStyleCheck(`form-check-input`);
+        newFlag = false;
+      } else if (
+        valueEmail === note.email &&
+        valuePassword === note.password &&
+        check !== note.check
+      ) {
+        setStyleEmail(`form-control`);
+        setStylePassword(`form-control`);
+        setStyleCheck(`form-check-input authentication__style-error`);
+        newFlag = false;
+      } else if (
+        valueEmail === note.email &&
+        valuePassword !== note.password &&
+        check === note.check
+      ) {
+        setStyleEmail(`form-control`);
+        setStylePassword(`form-control authentication__style-error`);
+        setStyleCheck(`form-check-input`);
+        newFlag = false;
+      } else if (
+        valueEmail !== note.email &&
+        valuePassword === note.password &&
+        check === note.check
+      ) {
+        setStyleEmail(`form-control authentication__style-error`);
+        setStylePassword(`form-control`);
+        setStyleCheck(`form-check-input`);
+        newFlag = false;
+      } else if (
+        valueEmail === note.email &&
+        valuePassword !== note.password &&
+        check !== note.check
+      ) {
+        setStyleEmail(`form-control`);
+        setStylePassword(`form-control authentication__style-error`);
+        setStyleCheck(`form-check-input authentication__style-error`);
+        newFlag = false;
+      } else if (
+        valueEmail !== note.email &&
+        valuePassword === note.password &&
+        check !== note.check
+      ) {
+        setStyleEmail(`form-control authentication__style-error`);
+        setStylePassword(`form-control`);
+        setStyleCheck(`form-check-input authentication__style-error`);
+        newFlag = false;
+      }
+      return null;
+    });
+    return newFlag;
   }, [valueEmail, valuePassword, check]);
+
+  /* БЕЗ хука useEffect,
+  обновление значения с помощью функции setFlag()  
+  происходит только на следующем цикле рендеринга, 
+  что влечет за собой, задержку перехода на главную страницу(приходится нажимать
+  на кнопку 2 раза).
+  С хуком useEffect, функция enterData() отрабатывает правильно. */
 
   useEffect(() => {
     if (enterData()) {
       setFlag(true);
-      console.log("888");
     } else {
       setStyleEmail(`form-control`);
       setStylePassword(`form-control`);
       setStyleCheck(`form-check-input`);
       setFlag(false);
-      console.log("999");
     }
   }, [enterData]);
 
