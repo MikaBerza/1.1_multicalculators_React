@@ -151,37 +151,37 @@ function Authentication() {
           requirement={"Заполните поля"}
         />
         <InputField
-          typeAtr={"email"}
-          classAtr={styleEmail}
-          autoCompleteAtr={"off"}
-          placeholderAtr={"Адрес эл.почты"}
-          valueAtr={valueEmail}
+          type={"email"}
+          className={styleEmail}
+          autoComplete={"off"}
+          placeholder={"Адрес эл.почты"}
+          value={valueEmail}
           onChange={handleChangeEmail}
         />
         <InputField
-          typeAtr={"password"}
-          classAtr={stylePassword}
-          autoCompleteAtr={"off"}
-          placeholderAtr={"Пароль"}
-          valueAtr={valuePassword}
+          type={"password"}
+          className={stylePassword}
+          autoComplete={"off"}
+          placeholder={"Пароль"}
+          value={valuePassword}
           onChange={handleChangePassword}
         />
         <Check
-          typeAtr={"checkbox"}
-          classAtr={styleCheck}
+          type={"checkbox"}
+          className={styleCheck}
           onCheck={check}
           onChangeCheck={handleChangeCheck}
           text={"Я не робот"}
         />
         <Button
-          typeAtr={"button"}
-          classAtr={"btn btn-primary authentication__btn"}
+          type={"button"}
+          className={"btn btn-primary authentication__btn"}
           onClick={enterData}
           text={"Войти"}
           flag={flag}
         />
         <Description
-          classAtr={"authentication__description"}
+          className={"authentication__description"}
           description={`Вычислители помогают автоматизировать бытовые домашние расчеты и немного развлечься`}
         />
       </form>

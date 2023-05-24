@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import "../Authentication.css";
 
-function Button({ typeAtr, classAtr, onClick, text, flag }) {
+function Button({ type, className, onClick, text, flag }) {
   return (
     <Link
       to={flag ? "/Main" : "/"}
-      type={typeAtr}
-      className={classAtr}
+      type={type}
+      className={className}
       onClick={onClick}
     >
       {text}

@@ -1,21 +1,21 @@
 import "../Authentication.css";
 
 function InputField({
-  typeAtr,
-  classAtr,
-  autoCompleteAtr,
-  placeholderAtr,
-  valueAtr,
+  type,
+  className,
+  autoComplete,
+  placeholder,
+  value,
   onChange,
 }) {
   return (
     <div className="mb-3">
       <input
-        type={typeAtr}
-        className={classAtr}
-        autoComplete={autoCompleteAtr}
-        placeholder={placeholderAtr}
-        value={valueAtr}
+        type={type}
+        className={className}
+        autoComplete={autoComplete}
+        placeholder={placeholder}
+        value={value}
         onChange={onChange}
       />
     </div>

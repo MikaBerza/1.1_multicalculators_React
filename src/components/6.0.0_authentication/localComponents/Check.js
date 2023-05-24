@@ -1,11 +1,11 @@
 import "../Authentication.css";
 
-function Check({ typeAtr, classAtr, onCheck, onChangeCheck, text }) {
+function Check({ type, className, onCheck, onChangeCheck, text }) {
   return (
     <div className="mb-3 form-check">
       <input
-        type={typeAtr}
-        className={classAtr}
+        type={type}
+        className={className}
         checked={onCheck}
         onChange={onChangeCheck}
       />
