@@ -1,7 +1,5 @@
-[
-  {
-    "email": "Address@mail.ru",
-    "password": "Adr78*#",
-    "check": true
-  }
-]
+{
+  "email": "Address@mail.ru",
+  "password": "Adr78*#",
+  "checkbox": true
+}
