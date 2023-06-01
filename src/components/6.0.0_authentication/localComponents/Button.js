@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import "../Authentication.css";
 
 function Button({ type, className, onClick, text }) {
